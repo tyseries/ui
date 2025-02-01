@@ -10,10 +10,10 @@ export default function Home() {
         <Image src="/logo.svg" alt="Logo" width={100} height={100} className="h-8 w-fit" />
         <p className="font-semibold text-xl ml-2 italic">Water UI</p>
         <div className="ml-auto flex items-center space-x-2">
-          <Link href="https://github.com/tyseries/ui" target="_blank" rel="noopener noreferrer" className="w-8 h-8 duration-200 hover:bg-slate-200 flex items-center justify-center rounded-lg">
+          <Link href="https://github.com/tyseries/ui" target="_blank" rel="noopener noreferrer" className="w-8 h-8 border border-slate-200 duration-200 hover:bg-slate-200 flex items-center justify-center rounded-lg">
             <FaGithub className="text-xl" />
           </Link>
-          <Link href="https://github.com/tyseries/ui" target="_blank" rel="noopener noreferrer" className="w-8 h-8 duration-200 hover:bg-slate-200 flex items-center justify-center rounded-lg">
+          <Link href="https://github.com/tyseries/ui" target="_blank" rel="noopener noreferrer" className="w-8 h-8 border border-slate-200 duration-200 hover:bg-slate-200 flex items-center justify-center rounded-lg">
             <FaNpm className="text-xl" />
           </Link>
         </div>
