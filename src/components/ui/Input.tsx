@@ -1,10 +1,10 @@
 import React, { InputHTMLAttributes } from 'react';
 
-interface InputFieldProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
+interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   size?: 'sm' | 'md' | 'lg'; // サイズを指定するプロパティ
 }
 
-const InputField: React.FC<InputFieldProps> = ({ size = 'md', className = '', ...props }) => {
+const Input: React.FC<InputProps> = ({ size = 'md', className = '', ...props }) => {
   // サイズに応じたクラスを設定
   const sizeClasses = {
     sm: 'px-3 py-1 text-sm',   // 小さいサイズ
@@ -20,4 +20,4 @@ const InputField: React.FC<InputFieldProps> = ({ size = 'md', className = '', ..
   );
 };
 
-export default InputField;
+export default Input;
