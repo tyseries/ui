@@ -1,9 +1,10 @@
 "use client"
-import Button from "@/components/ui/Button";
-import Input from "@/components/ui/Input";
-import { FiChevronDown } from "react-icons/fi";
 import Header from "@/components/Header";
 import LeftMenu from "@/components/LeftMenu";
+import Image from "next/image";
+import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
+import { FiX } from "react-icons/fi";
 
 export default function Home() {
   return (
@@ -12,29 +13,25 @@ export default function Home() {
       <div className="md:w-5/6">
         <Header />
 
-        <div className="p-4 md:p-8 space-y-8">
-          <div className="space-x-2 flex">
-            <Button>Primary</Button>
-            <Button variant="secondary">Secondary</Button>
+        <div className="p-4">
+          <div className="bg-white/50 px-4 py-2 rounded-lg text-slate-600 italic flex items-center border border-slate-200 shadow-sm">
+            <p>Just go ahead and install Water UI with <Link href="/" className="underline decoration-dotted">npm</Link>!</p>
+            <FiX className="ml-auto text-xl" />
           </div>
 
-          <div className="space-y-4 flex flex-col">
-            <Input placeholder="Input here" />
-          </div>
-
-          <div>
-            <label htmlFor="country" className="block text-slate-400 text-sm font-semibold mb-2">Country</label>
-            <div className="relative w-64">
-              <select id="country" className="block w-full px-4 bg-white py-2 border border-slate-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/20 appearance-none focus:ring-2 outline-none duration-200 focus:border-primary">
-                <option value="">Select a country</option>
-                <option value="USA">United States</option>
-                <option value="UK">United Kingdom</option>
-                <option value="DE">Germany</option>
-                <option value="FR">France</option>
-              </select>
-              <div className="absolute top-1/2 right-4 transform -translate-y-1/2 pointer-events-none">
-                <FiChevronDown className="h-4 w-4 text-slate-400" />
+          <div className="my-8 px-4 flex flex-col md:flex-row md:h-64 md:items-center overflow-hidden">
+            <div className="md:hidden md:w-1/2">
+              <Image src="/animal.svg" alt="Animal" width={100} height={100} className="w-full" />
+            </div>
+            <div className="md:w-1/2">
+              <h1 className="text-4xl font-semibold">Super Easy-to-Use React UI Components</h1>
+              <div className="flex flex-row items-center mt-8 gap-2">
+                <Link href="/docs/get-started"><div className="px-4 py-2 rounded-lg bg-slate-800 text-white font-semibold w-fit">Get Started</div></Link>
+                <Link href="https://github.com/tyseries/ui" target="_blank" rel="noopener noreferrer"><div className="px-4 py-2 rounded-lg bg-slate-200 font-semibold w-fit flex items-center"><FaGithub className="text-xl mr-2" />GitHub</div></Link>
               </div>
+            </div>
+            <div className="md:w-1/2 hidden md:flex">
+              <Image src="/animal.svg" alt="Animal" width={100} height={100} className="w-full" />
             </div>
           </div>
         </div>

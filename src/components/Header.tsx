@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FaGithub, FaNpm } from "react-icons/fa";
 import { FiMenu, FiX } from "react-icons/fi";
 import Input from "./ui/Input";
+import LinkMenu from "./LinkMenu";
 
 export default function Header() {
       const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,12 +17,15 @@ export default function Header() {
             <p className="text-xl ml-2 italic">Water UI</p>
           </Link>
           <div className="ml-auto hidden md:flex items-center flex-wrap gap-2">
-          <Link href="https://github.com/tyseries/ui" target="_blank" rel="noopener noreferrer" className="w-8 h-8 aspect-square flex items-center justify-center border rounded-lg border-slate-200 hover:bg-slate-200 duration-200">
-            <FaGithub className="text-xl" />
-          </Link>
+            <Link href="https://github.com/tyseries/ui" target="_blank" rel="noopener noreferrer" className="w-8 h-8 aspect-square flex items-center justify-center border rounded-lg border-slate-200 hover:bg-slate-200 duration-200">
+              <FaGithub className="text-xl" />
+            </Link>
+            <Link href="https://github.com/tyseries/ui" target="_blank" rel="noopener noreferrer" className="h-8 flex items-center justify-center border rounded-lg border-slate-200 hover:bg-slate-200 duration-200 px-2">
+              <FaNpm className="text-xl" /><p className="text-sm ml-2">Install via npm!</p>
+            </Link>
           </div>
           <div className="ml-auto md:hidden relative">
-            <button onClick={toggleMenu} className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-slate-200 duration-200 border border-slate-200">
+            <button onClick={toggleMenu} className="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-slate-200 duration-200 border border-slate-200">
               <FiMenu className="text-xl" />
             </button>
             {isMenuOpen && (
@@ -29,24 +33,18 @@ export default function Header() {
                 <Link href="/" className="flex items-center select-none">
                   <Image src="/logo.svg" alt="Logo" width={100} height={100} className="h-8 w-fit aspect-square"/>
                   <p className="text-xl ml-2 italic">Water UI</p>
-                  <button onClick={toggleMenu} className="ml-auto w-8 h-8 rounded-full flex items-center justify-center hover:bg-slate-200 duration-200 border border-slate-200">
+                  <button onClick={toggleMenu} className="ml-auto w-8 h-8 rounded-lg flex items-center justify-center hover:bg-slate-200 duration-200 border border-slate-200">
                     <FiX   className="text-xl" />
                   </button>
                 </Link>
                 <Input placeholder="Search docs..." className="my-4 shadow-sm w-full" size="sm" />
-                <div className="flex flex-col overflow-y-auto">
-                  <p className="mb-2">Documentation</p>
-                  <Link href="/docs/introduction" className="outline-none text-sm px-4 py-2 rounded-full hover:bg-slate-200 duration-200 text-slate-600 focus-visible:bg-slate-200">Introduction</Link>
-                  <Link href="/docs/get-to-started" className="outline-none text-sm px-4 py-2 rounded-full hover:bg-slate-200 duration-200 text-slate-600 focus-visible:bg-slate-200">Get to Stared</Link>
-                  <p className="mt-4 mb-2">Components</p>
-                  <Link href="/components/button" className="outline-none text-sm px-4 py-2 rounded-full hover:bg-slate-200 duration-200 text-slate-600 focus-visible:bg-slate-200">Button</Link>
-                  <Link href="/components/input" className="outline-none text-sm px-4 py-2 rounded-full hover:bg-slate-200 duration-200 text-slate-600 focus-visible:bg-slate-200">Input</Link>
-                </div>
-                <div className="mt-8 flex items-center flex-wrap gap-2 text-sm">
-                  <Link href="https://github.com/tyseries/ui" target="_blank" rel="noopener noreferrer" className="px-2 py-1 border border-slate-200 duration-200 hover:bg-slate-200 flex items-center justify-center rounded-full">
+                <LinkMenu />
+                <div className="border-t border-slate-200 my-4" />
+                <div className="flex items-center flex-wrap gap-2 text-sm">
+                  <Link href="https://github.com/tyseries/ui" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-50 duration-200 hover:bg-slate-200 flex items-center justify-center rounded-lg">
                     <FaGithub className="text-xl mr-2" /><p>GitHub</p>
                   </Link>
-                  <Link href="https://github.com/tyseries/ui" target="_blank" rel="noopener noreferrer" className="px-2 py-1 border border-slate-200 duration-200 hover:bg-slate-200 flex items-center justify-center rounded-full">
+                  <Link href="https://github.com/tyseries/ui" target="_blank" rel="noopener noreferrer" className="p-2 bg-slate-50 duration-200 hover:bg-slate-200 flex items-center justify-center rounded-lg">
                     <FaNpm className="text-xl mr-2" /><p>Install via npm!</p>
                   </Link>
                 </div>
