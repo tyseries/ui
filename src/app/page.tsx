@@ -43,6 +43,21 @@ export default function Home() {
               <Image src="/animal.svg" alt="Animal" width={100} height={100} className="w-full" />
             </div>
           </div>
+
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-white p-4 rounded-lg">
+              <div className="w-8 h-8 aspect-square bg-primary text-white rounded-full flex items-center justify-center font-semibold text-xl mx-auto mb-4">1</div>
+              <h2 className="font-semibold text-xl text-center">Easy to Install</h2>
+            </div>
+            <div className="bg-white p-4 rounded-lg">
+              <div className="w-8 h-8 aspect-square bg-primary text-white rounded-full flex items-center justify-center font-semibold text-xl mx-auto mb-4">2</div>
+              <h2 className="font-semibold text-xl text-center">Easy to Customize</h2>
+            </div>
+            <div className="bg-white p-4 rounded-lg">
+              <div className="w-8 h-8 aspect-square bg-primary text-white rounded-full flex items-center justify-center font-semibold text-xl mx-auto mb-4">3</div>
+              <h2 className="font-semibold text-xl text-center">Works great with Tailwind CSS</h2>
+            </div>
+          </div>
         </div>
       </div>
     </div>
