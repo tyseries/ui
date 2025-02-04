@@ -1,4 +1,5 @@
 "use client"
+import { useState } from 'react';
 import Header from "@/components/Header";
 import LeftMenu from "@/components/LeftMenu";
 import Image from "next/image";
@@ -7,6 +8,12 @@ import { FaGithub } from "react-icons/fa";
 import { FiX } from "react-icons/fi";
 
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(true);
+
+  const handleClose = () => {
+    setIsVisible(false); // クリックで非表示にする
+  };
+
   return (
     <div className="md:flex">
       <LeftMenu />
@@ -14,12 +21,14 @@ export default function Home() {
         <Header />
 
         <div className="p-4">
-          <div className="bg-white/50 px-4 py-2 rounded-lg text-slate-600 italic flex items-center border border-slate-200 shadow-sm">
-            <p>Just go ahead and install Water UI with <Link href="/" className="underline decoration-dotted">npm</Link>!</p>
-            <FiX className="ml-auto text-xl" />
-          </div>
+          {isVisible && (
+            <div className="mb-8 bg-white/50 px-4 py-2 rounded-lg text-slate-600 italic flex items-center border border-slate-200 shadow-sm">
+              <p>Just go ahead and install Water UI with{' '}<Link href="/" className="underline decoration-dotted">npm</Link>!</p>
+              <button className="ml-auto p-0" onClick={handleClose}><FiX className="text-xl" /></button>
+            </div>
+          )}
 
-          <div className="my-8 px-4 flex flex-col md:flex-row md:h-64 md:items-center overflow-hidden">
+          <div className="px-4 flex flex-col md:flex-row md:h-64 md:items-center overflow-hidden">
             <div className="md:hidden md:w-1/2">
               <Image src="/animal.svg" alt="Animal" width={100} height={100} className="w-full" />
             </div>
