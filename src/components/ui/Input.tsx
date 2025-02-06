@@ -5,7 +5,6 @@ interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>
 }
 
 const Input: React.FC<InputProps> = ({ size = 'md', className = '', ...props }) => {
-  // サイズに応じたクラスを設定
   const sizeClasses = {
     sm: 'px-3 py-1 text-sm',   // 小さいサイズ
     md: 'px-4 py-2 text-base',  // 中くらいのサイズ（デフォルト）
