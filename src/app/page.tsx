@@ -33,7 +33,7 @@ export default function Home() {
               <Image src="/animal.svg" alt="Animal" width={100} height={100} className="w-full" />
             </div>
             <div className="md:w-1/2">
-              <h1 className="text-4xl font-semibold">Super Easy-to-Use React UI Components</h1>
+              <h1 className="text-4xl font-semibold"><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">Super Easy-to-Use</span> React UI Components</h1>
               <div className="flex flex-row items-center mt-8 gap-2">
                 <Link href="/docs/get-started"><div className="px-4 py-2 rounded-lg bg-slate-800 text-white font-semibold w-fit">Get Started</div></Link>
                 <Link href="https://github.com/tyseries/ui" target="_blank" rel="noopener noreferrer"><div className="px-4 py-2 rounded-lg bg-slate-200 font-semibold w-fit flex items-center"><FaGithub className="text-xl mr-2" />GitHub</div></Link>
