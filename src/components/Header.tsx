@@ -29,7 +29,7 @@ export default function Header() {
               <FiMenu className="text-xl" />
             </button>
             {isMenuOpen && (
-              <div className="z-50 absolute top-0 right-0 menu bg-white shadow-2xl p-4 w-64 min-h-screen">
+              <div className="z-50 absolute top-0 right-0 menu bg-white shadow-2xl p-4 w-64 min-h-screen overflow-y-auto">
                 <Link href="/" className="flex items-center select-none">
                   <Image src="/logo.svg" alt="Logo" width={100} height={100} className="h-8 w-fit aspect-square"/>
                   <p className="text-xl ml-2 italic">Water UI</p>
